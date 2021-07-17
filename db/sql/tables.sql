@@ -75,3 +75,18 @@ INSERT INTO user_details VALUES (
     "yoginimulchandani@gmail.com",
     10000
 );
+
+ALTER TABLE user_details 
+ADD UNIQUE (email);
+
+
+CREATE TABLE transactions (
+    id int AUTO_INCREMENT,
+    from_id int NOT NULL,
+    to_id int NOT NULL,
+    amount int NOT NULL,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (to_id) REFERENCES user_details(id),
+    FOREIGN KEY (from_id) REFERENCES user_details(id),
+    PRIMARY KEY (id)
+);

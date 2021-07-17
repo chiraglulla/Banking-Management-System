@@ -1,12 +1,12 @@
 <?php
-    include "./db/getUsers.php"
+    require "./db/getUsers.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     
     <?php 
-        include "./templates/header.php"
+        include "./templates/header.php";
     ?>
     
     <?php foreach($users as $user):?>
