@@ -1,11 +1,31 @@
 <?php
 
     require 'conn.php';
+    $user = [];
+    $transaction_data = [];
+    if(isset($_POST["info"])) {
+        global $user;
+        global $transaction_data;
 
-    if(isset($_POST["info"])){
         $id = mysqli_real_escape_string($conn, $_POST['id']);
 
-        echo $id;
+        $sql = "SELECT user_details.name, user_details.email, user_details.current_balance FROM user_details WHERE id = $id;";
+
+        $result = mysqli_query($conn, $sql);
+
+        $user = mysqli_fetch_assoc($result);
+
+        $sql = "SELECT to_id, amount, transaction_date FROM transactions WHERE from_id = $id";
+
+        $result = mysqli_query($conn, $sql);
+
+        $transaction_data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        mysqli_free_result($result);
+
+        mysqli_close($conn);
+
+        // print_r($transaction_data);
     }
 
 ?>
