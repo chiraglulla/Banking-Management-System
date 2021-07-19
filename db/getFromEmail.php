@@ -19,6 +19,9 @@
         mysqli_close($conn);
 
         $_SESSION["email"] = $user_email[0];
-    }
+
+    }//else{
+    //     $_SESSION["email"] = "";
+    // } 
 
 ?>

@@ -11,9 +11,8 @@
     
     <?php foreach($users as $user):?>
 
-        <p><?php echo htmlspecialchars($user['name']); ?></p>
-        <p><?php echo htmlspecialchars($user['email']); ?></p>
-        <p><?php echo htmlspecialchars($user['current_balance']); ?></p>
+        <p>Name: <?php echo htmlspecialchars($user['name']); ?></p>
+        <p>Current Balance: <?php echo htmlspecialchars($user['current_balance']); ?></p>
 
         <form action="./templates/userDetails.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $user["id"]?>">
