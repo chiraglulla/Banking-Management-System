@@ -3,9 +3,12 @@
     require 'conn.php';
     $user = [];
     $transaction_data = [];
+    $count = 1;
+    
     if(isset($_POST["info"])) {
         global $user;
         global $transaction_data;
+       
 
         $id = mysqli_real_escape_string($conn, $_POST['id']);
 
@@ -24,8 +27,6 @@
         mysqli_free_result($result);
 
         mysqli_close($conn);
-
-        // print_r($transaction_data);
     }
 
 ?>
