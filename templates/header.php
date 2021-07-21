@@ -15,7 +15,7 @@
 <body>
     <header class="container">
         <nav class="navbar navbar-light"">
-            <a class="display-4" href="/Banking-Managment-System" style="text-decoration:none;">Banking System</a>
+            <a class="display-4" href="/" style="text-decoration:none;">Banking System</a>
         </nav>
         <hr>
     </header>
