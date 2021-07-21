@@ -18,7 +18,7 @@
 
         $user = mysqli_fetch_assoc($result);
 
-        $sql = "SELECT to_id, amount, transaction_date FROM transactions WHERE from_id = $id";
+        $sql = "SELECT * FROM transactions WHERE from_id = $id;";
 
         $result = mysqli_query($conn, $sql);
 

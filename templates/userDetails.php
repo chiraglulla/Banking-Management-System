@@ -47,7 +47,7 @@
                                         <h5><?php echo htmlspecialchars($receiver["name"])."<br>"; ?></h5>
                                         <span class="text-muted"><?php echo htmlspecialchars($receiver["email"]); ?></span>
                                     </td>
-                                    <td><h5>&#8377; <?php echo htmlspecialchars($transaction["amount"]); ?></h5></td>
+                                    <td><h5> - &#8377; <?php echo htmlspecialchars($transaction["amount"]); ?></h5></td>
                                     <td><h5><?php echo $date;?></h5></td>
                                 </tr>
                                 <?php $count++; ?>
