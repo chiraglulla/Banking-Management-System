@@ -18,7 +18,7 @@
 
         $user = mysqli_fetch_assoc($result);
 
-        $sql = "SELECT * FROM transactions WHERE from_id = $id;";
+        $sql = "SELECT * FROM transactions WHERE from_id = $id ORDER BY transaction_date DESC;";
 
         $result = mysqli_query($conn, $sql);
 

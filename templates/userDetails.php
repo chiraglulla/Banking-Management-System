@@ -29,7 +29,7 @@
                     </div>
                 <?php else: ?>
                     <h4 class="py-3 text-muted">Transaction History</h4>
-                    <table class="table">
+                    <table class="table table-hover table-responsive-sm">
                         <thead class="thead-dark">
                             <tr>
                             <th scope="col">#</th>
